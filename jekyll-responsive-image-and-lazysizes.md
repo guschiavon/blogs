@@ -23,7 +23,7 @@ This is required to generate the different image sizes automatically.
 
 ### `jekyll-responsive-image`
 
-- Install jekyll-responsive-image in project by adding `gem ‘jekyll-responsive-image’` to the Gemfile and running `bundle install`
+- Install [jekyll-responsive-image](https://github.com/wildlyinaccurate/jekyll-responsive-image) in project by adding `gem ‘jekyll-responsive-image’` to the Gemfile and running `bundle install`
 - In your `_config.yml` folder, add the following:
 ```
 plugins:
