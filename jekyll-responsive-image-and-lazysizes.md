@@ -18,7 +18,7 @@ This is required to generate the different image sizes automatically.
 ### `lazysizes`
 
 - Head to [lazysizes](https://github.com/aFarkas/lazysizes) to download the script. Copy the code and paste it in a file called `lazysizes.min.js` and save it in the appropriate folder (i.e. `/js`).
-- Add `<script src="lazysizes.min.js" async=""></script>` to your markup (i.e. end of `body` tag)
+- Add `<script src="/js/lazysizes.min.js" async=""></script>` to your markup (i.e. end of `body` tag)
 - That's it for now!
 
 ### `jekyll-responsive-image`
