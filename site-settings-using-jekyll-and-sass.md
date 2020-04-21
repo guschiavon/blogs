@@ -1,5 +1,5 @@
 # Enable site-wide settings using Jekyll and Sass
-_This tutorial works really well with [CloudCannon CMS](https://cloudcannon.com)_
+_This tutorial works really well for Jekyll sites hosted on [CloudCannon CMS](https://cloudcannon.com)_; I'm not making any money out of this!!
 
 ## Overview
 
