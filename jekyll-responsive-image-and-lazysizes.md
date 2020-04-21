@@ -2,7 +2,7 @@
 
 ## Overview
 
-Web optimized images (that is, in various sizes and compression) and lazy loading images are our friends when it comes to page load speed. This "dynamic duo" is a powerful ally to crush the score at Google's PageSpeed. Providing images in a `srcset` attribute allows the browser to choose which resolution to load according to various screen sizes and even resolution (pixel density), and telling the browser **when** to load them will also support faster loading times, as some images will load after the initial styles are rendered by the browser.
+Web optimized images (that is, in various sizes and compression) and lazy loading images are our friends when it comes to page load speed. This "dynamic duo" is a powerful ally to crush the score at Google's PageSpeed. Providing images in a `srcset` attribute allows the browser to choose which resolution to load according to various screen sizes and even resolution (pixel density), and telling the browser **when** to load them will also support faster loading times, as some images will load after the initial styles are rendered by the browser or better, not at all depending on user scroll behaviour, which saves bandwidth and makes page loading less expensive of a task.
 
 Optimizing images for web is a time-consuming task. Resizing, optimizing and organizing them can take a great deal of effort when all we want to do is code. This implementation aims at **automating the process of image optimization and link it to lazy loading image capabilities for optimal performance**.
 
