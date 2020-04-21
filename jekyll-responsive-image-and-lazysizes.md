@@ -2,7 +2,7 @@
 
 ## Objective
 
-Merge `jekyll-responsive-image` plugin by Joseph Wynn (Github: wildlyinaccurate) together with Alexander Farkas `lazysizes` (Github: aFarkas) to render lazy loading, responsive images with Jekyll
+Use `jekyll-responsive-image` plugin by Joseph Wynn (Github: wildlyinaccurate) together with Alexander Farkas `lazysizes` (Github: aFarkas) to render lazy loading, responsive images with Jekyll
 
 ## Setup:
 
@@ -11,7 +11,7 @@ Install the following dependencies & plugin:
 ### `rmagick`
 
 This is required to generate the different image sizes automatically.
-- Run 'brew install imagemagick` on MacOS or follow the [Rmagick installation documentation](https://github.com/rmagick/rmagick)
+- Run `brew install imagemagick` on MacOS or follow the [Rmagick installation documentation](https://github.com/rmagick/rmagick)
 - Add `gem 'rmagick'` to your `Gemfile`
 - Run `bundle install` on Terminal
 
