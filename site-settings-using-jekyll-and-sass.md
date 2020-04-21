@@ -3,11 +3,13 @@ _This tutorial works really well with [CloudCannon CMS](https://cloudcannon.com)
 
 ## Overview
 
-The scope: One of my clients asked me to implement a structure that allows editors to easily change basic settings on the site,like colors, fonts, logos, etc without having to fiddle with code. The projects are hosted on **CloudCannon**, a CMS for Jekyll which is quite awesome. The objective was to _allow editors using CloudCannon to use the CMS's UI for intuitive changes_ of these settings.
+The scope: One of my clients asked me to implement a structure that allows editors to easily change basic settings on the site, like colors, fonts, logos, etc without having to fiddle with code. The projects are hosted on [**CloudCannon**](https://cloudcannon.com), a CMS for Jekyll which is quite awesome. The objective was to _allow editors using CloudCannon to use the CMS's UI for intuitive changes_ of these settings.
+
+After some analysis I've opted to work with `Sass` instead of `CSS` as it is much more powerful for this set up. With that said, it will still work with plain `CSS` but I believe the code will be much more bulky.
 
 ### Before we start...
 
-Please note that this process breakdown **assumes that you are famiiar with Sass**; if you are not, I highly recommend that you take a small tutorial on how it works. FreeCodeCamp has this [great tutorial](https://www.youtube.com/watch?v=_a5j7KoflTs) that covers some of the basic functions (don't be scared by the 2hr-lenght: focus on the first half hour for a good insight on how Sass works).
+Please note that this process breakdown **assumes that you are familiar with Sass**; if you are not, I highly recommend that you take a small tutorial on how it works. FreeCodeCamp has this [great tutorial](https://www.youtube.com/watch?v=_a5j7KoflTs) that covers some of the basic functions (don't be scared by the 2hr-lenght: focus on the first half hour for a good insight on how Sass works).
 
 _I'm also a beginner with **Sass** so any input and comment is highly appreciated!_
 
@@ -21,8 +23,8 @@ _I'm also a beginner with **Sass** so any input and comment is highly appreciate
 
 ## Implementation
 
-#### `settings.yml`
-Set up the structure & values of your variables here. Colors, font embed codes, images, etc... This will allow CloudCannon to display these keys in a user-friendly interface on their Explore view. They have a nice database of keys which are displayed with their own UI, which you can check [here](https://docs.cloudcannon.com/editing/interfaces/inputs/). As an example:
+#### Configuring your `settings.yml` file
+Set up the structure & values of your variables here. Colors, font embed codes, images, etc... Anything you want to have on the CloudCannon user interface. This will allow CloudCannon to display these keys in a user-friendly interface on their Explore view. They have a nice database of keys which are displayed with their own UI, which you can check [here](https://docs.cloudcannon.com/editing/interfaces/inputs/). As an example:
 ```
 basic_settings:
   site-name: My awesome site
@@ -48,16 +50,15 @@ fonts:
   bold-font: 600
   extra-bold-font: 700
 ```
-Note that some of these keys have _underscore_ rather than a _dash_; this syntax allows CloudCannon to read the keys and provide the friendly UI for editors, so definitely [check their documentation](https://docs.cloudcannon.com/editing/interfaces/inputs/) for more detailed information.
+Note that some of these keys have _**underscore**_ rather than a _dash_; this syntax allows CloudCannon to read the keys and provide the friendly UI for editors, so definitely [check their documentation](https://docs.cloudcannon.com/editing/interfaces/inputs/) for more detailed information.
 
-#### `style.scss`
+#### Configuring the `style.scss` file
 This file needs to have empty Front Matter for Jekyll to process it; **do so by adding 2 lines of 3 dashes (`---`) at the top of the file**. So:
 ```
 ---
 ---
 // Write your SCSS from here onwards
 ```
-
 Write your `scss` normally, and where you'd normally place the value for the Sass variables (that is, in your `main.scss` stylesheet), place a Liquid tag to pass the values from the `settings.yml` file. Following this project's example, *in your `main.scss` file*, instead of:
 ```
 $primary_color: '#479aa1';
@@ -66,7 +67,7 @@ you should set:
 ```
 $primary_color:{{site.data.settings.colors.primary_color}};
 ```
-### Overall the `main.scss` file should look something like this:
+### Overall, the `main.scss` file should look something like this:
 ```
 ---
 ---
