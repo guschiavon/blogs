@@ -1,11 +1,11 @@
 # Enable site-wide settings using Jekyll and Sass
-_This tutorial works really well for Jekyll sites hosted on [CloudCannon CMS](https://cloudcannon.com)_; I'm not making any money out of this!!
+_This tutorial works really well for Jekyll sites hosted on [CloudCannon CMS](https://cloudcannon.com)_; with that said, I'm **not** making any money out of this!!
 
 ## Overview
 
-The scope: One of my clients asked me to implement a structure that allows editors to easily change basic settings on the site, like colors, fonts, logos, etc without having to fiddle with code. The projects are hosted on [**CloudCannon**](https://cloudcannon.com), a CMS for Jekyll which is quite awesome. The objective was to _allow editors using CloudCannon to use the CMS's UI for intuitive changes_ of these settings.
+One of my clients asked me to implement a **structure that allows editors to easily change basic settings on their CloudCannon site**, like colors, fonts, logos, etc without having to fiddle with code files. The projects are hosted on [**CloudCannon**](https://cloudcannon.com), a CMS for Jekyll which is quite awesome. The objective was to _allow editors to use the CMS's UI for intuitive changes_ of these settings, without having to go to a `_config.yml` file or similar.
 
-After some analysis I've opted to work with `Sass` instead of `CSS` as it is much more powerful for this set up. With that said, it will still work with plain `CSS` but I believe the code will be much more bulky.
+After some analysis I've opted to work with `Sass` instead of `CSS` as it is much more powerful for this set up. With that said, it will still work with plain `CSS` but I believe the code won't be as clean.
 
 ### Before we start...
 
@@ -17,11 +17,11 @@ _I'm also a beginner with **Sass** so any input and comment is highly appreciate
 
 1. First, install a `Sass/SCSS` processor on your code editor (Atom, etc.). This will ensure that `scss` files are processed into `css` when you save them.
 2. Set up your folder structure as usual; add some markup to your `index.html` file for reference.
-3. Create a `style.scss` file and place it on your `styles` folder: this is your **main** `scss` file which Jekyll will render
-4. Create a `_sass` folder and include all your **Sass partials**, mixins and all here (the Sass `'@import'` partials)
-5. Next, create a `_data` **_folder_** and create a `settings.yml` **_file_** inside of it: this is where you will put all the variable values for Jekyll to output from Liquid tags
+3. Create a `style.scss` file and place it on your `styles` folder: this is your **main** `scss` file which Jekyll will render.
+4. Create a `_sass` folder and include all your **Sass partials**, mixins and all here (the Sass `'@import'` partials).
+5. Next, create a `_data` **_folder_** and create a `settings.yml` **_file_** inside of it: this is where you will put all the variable values for Jekyll to output from Liquid tags.
 
-## Implementation
+## Implementation ("Jekyllfy Sass")
 
 #### Configuring your `settings.yml` file
 Set up the structure & values of your variables here. Colors, font embed codes, images, etc... Anything you want to have on the CloudCannon user interface. This will allow CloudCannon to display these keys in a user-friendly interface on their Explore view. They have a nice database of keys which are displayed with their own UI, which you can check [here](https://docs.cloudcannon.com/editing/interfaces/inputs/). As an example:
