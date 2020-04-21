@@ -24,10 +24,10 @@ This is required to generate the different image sizes automatically.
 ### `jekyll-responsive-image`
 
 - Install [jekyll-responsive-image](https://github.com/wildlyinaccurate/jekyll-responsive-image) in project by adding `gem ‘jekyll-responsive-image’` to the Gemfile and running `bundle install`
-- In your `_config.yml` folder, add the following:
+- In your `_config.yml` file, add the following:
 ```
 plugins:
-	- jekyll-responsive-image
+  - jekyll-responsive-image
 ```
 - Inside the `_includes` folder, create a base image template file, name it `dynamic-image.html` or *anything you want*. The file should contain a basic code like this (you can adjust this template to your needs):
 ```
