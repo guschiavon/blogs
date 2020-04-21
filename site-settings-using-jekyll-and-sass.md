@@ -98,5 +98,8 @@ sass:
 ```
 NB: _This is the path for the directory storing the `scss` partials; we can configure it to suit our project structure._
 
+### Reference repo
+Here's a reference repository to peek into some code: [Jekyllfy Sass](https://github.com/guschiavon/jekyllfy-sass)
+
 ## Troubleshooting
 Personally I have run into errors when trying to populate **_variables located in partials_** with YAML values, so the work around is to have all the Sass variables on our main `SCSS` file and use `@import` for the actual styles. Also, we *cannot* process Sass partials with Jekyll (meaning we cannot have empty frontmatter (`---`) in the partial files). At least it didn't work for me, so if you know more, please leave more comments below!
