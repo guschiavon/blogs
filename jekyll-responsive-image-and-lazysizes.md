@@ -120,7 +120,7 @@ image-alt: Chill, it's just a placeholder...
 {% assign alt = page.image-alt %}
 
 {% responsive_image_block %}
-  template: another-img-template.html
+  template: another-img-template.html # Add the template override reference here
   path: {{ path }}
   alt: {{ alt }}
 {% if title %}
